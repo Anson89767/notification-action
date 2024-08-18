@@ -5,7 +5,7 @@ branding:
   color: 'green'
 inputs:
   webhook:${{ secrets.WECOM_WEBHOOK_KEY }}
-    description: "企业微信机器人 webhook url key, 即 webhook/send?key=xxx, 配置为xxx即可"
+  description: "企业微信机器人 webhook url key, 即 webhook/send?key=xxx, 配置为xxx即可"
     required: true
   is_at_all:true
     description: "是否 @all @所有人?"

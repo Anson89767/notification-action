@@ -29,7 +29,16 @@ inputs:
     description: "读取完成后, 是否进行写操作, loop:循环, 第一行放置最后一行; delete:删除, nothing:不操作"
     required: false
     default: 'loop'
-  
+
+on:
+  schedule:
+    # 每个工作日上午8:30发送消息
+    - cron: '30 8 * * 1-5'
+    # ... (省略了之前的其他定时设置，如果有的话)
+
+  workflow_dispatch:
+    # 允许手动触发工作流程
+
 runs:
   using: 'composite'
   steps:

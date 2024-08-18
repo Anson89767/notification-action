@@ -4,10 +4,10 @@ branding:
   icon: 'send'  
   color: 'green'
 inputs:
-  webhook:
+  webhook:${{ secrets.WECOM_WEBHOOK_KEY }}
     description: "企业微信机器人 webhook url key, 即 webhook/send?key=xxx, 配置为xxx即可"
     required: true
-  is_at_all:
+  is_at_all:true
     description: "是否 @all @所有人?"
     required: false
     default: 'false'
@@ -15,7 +15,7 @@ inputs:
     description: "消息类型, 是否是从文件中读取消息, 类型包括:message, file, http"
     required: false
     default: 'message'
-  message:
+  message:明天要继续努力了哦orz
     description: "如果消息类型选择 message, 需要发送的内容"
     required: false
   file_name:

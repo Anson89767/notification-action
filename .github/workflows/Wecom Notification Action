@@ -15,7 +15,7 @@ inputs:
     description: "消息类型, 是否是从文件中读取消息, 类型包括:message, file, http"
     required: false
     default: 'message'
-  message:明天要继续努力了哦orz
+  message:"请加油完成手中的稿件，每一份努力都会以你想不到的方式回馈于你"
     description: "如果消息类型选择 message, 需要发送的内容"
     required: false
   file_name:
@@ -38,6 +38,11 @@ on:
 
   workflow_dispatch:
     # 允许手动触发工作流程
+    inputs:
+      message:'你好吗？我很好！明天要继续努力了哦orz'
+        description: '手动触发时输入的消息'
+        required: false
+        default: '默认消息内容'
 
 runs:
   using: 'composite'
